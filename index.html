@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <h1 class="title">Raindrops</h1>
+        <p class="description">
+            It's raining numbers! Solve the equations before they fill the lake.
+        </p>
+        <div class="drops">
+            <div class="drops__drop drops__drop--left-drop"></div>
+            <div class="drops__drop drops__drop--main-drop">
+                <div class="drops__plus">+</div>
+                <div class="drops__numbers">
+                    <span class="drops__number drops__number--first">2</span>
+                    <span class="drops__number drops__number--second">4</span>
+                </div>
+            </div>
+            <div class="drops__drop drops__drop--right-drop"></div>
+        </div>
+        <div class="game-menu">
+            <div class="game-menu__button game-menu__button--tutorial">
+                <span class="game-menu__tutorial-text">How to Play</span>
+                <img src="assets/images/question.png" alt="question" class="game-menu__question">
+            </div>
+            <div class="game-menu__button game-menu__button--play">
+                <span class="game-menu__play-text">Play</span>
+                <img src="assets/images/star.png" alt="star" class="game-menu__star">
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

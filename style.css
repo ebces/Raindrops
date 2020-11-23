@@ -1,0 +1,119 @@
+@font-face {
+    font-family: futurescope;
+    src: url(assets/fonts/19846.otf);
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#ffffff, #00fcfca2, #ffffff);
+    height: 100vh;
+}
+
+main {
+    min-width: 320px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 80px;
+    font-family: futurescope;
+    color: #00c5c5;
+    text-align: center;
+    font-size: 80px;
+}
+
+.description {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.drops {
+    display: flex;
+}
+
+.drops__drop {
+    background-image: url(assets/images/drop.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 33%;
+    height: 300px;
+}
+
+.drops__drop--main-drop {
+    background-size: 60%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00c5c5;
+}
+
+.drops__numbers,
+.drops__plus {
+    margin-top: 90px;
+}
+
+.drops__numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.drops__number--first {
+    transform: skew(20deg);
+}
+
+.drops__number--second {
+    transform: skew(-20deg);
+}
+
+.drops__drop--right-drop {
+    background-position-y: top;
+    background-position-x: 10%;
+}
+
+.game-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.game-menu__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+.game-menu__button--tutorial {
+    background: linear-gradient(#1d73b9, #4fcceb, #1d73b9);
+}
+
+.game-menu__button--tutorial:hover {
+    background: linear-gradient(#4fcceb, #1d73b9, #4fcceb);
+}
+
+.game-menu__button--play {
+    background: linear-gradient(#0b8300, #73e278, #0b8300);
+}
+
+.game-menu__button--play:hover {
+    background: linear-gradient(#73e278, #0b8300, #73e278);
+}
+
+.game-menu__button--tutorial:hover .game-menu__question,
+.game-menu__button--play:hover .game-menu__star {
+    transform: skew(-10deg);
+}
+
+.game-menu__question,
+.game-menu__star {
+    width: 30px;
+}
