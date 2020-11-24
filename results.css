@@ -1,0 +1,73 @@
+@font-face {
+    font-family: futurescope;
+    src: url(assets/fonts/19846.otf);
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#ffffff, #00fcfca2, #ffffff);
+    height: 100vh;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 80px;
+    font-family: futurescope;
+    color: #00c5c5;
+    text-align: center;
+    font-size: 80px;
+}
+
+.statistic {
+    border: 1px solid #a5a5a5;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #afafaf;
+}
+
+.statistic__speed,
+.statistic__accuracy {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.statistic__text {
+    font-family: sans-serif;
+    text-align: right;
+    padding-right: 70px;
+}
+
+.statistic__text--total-score {
+    font-size: 30px;
+    font-weight: bold;
+    color: #793a2a;
+    text-align: center;
+    padding: 0;
+}
+
+.continue-button {
+    cursor: pointer;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(#2fa700, #258100);
+    color: #ffffff;
+    text-align: center;
+}
+
+.continue-button:hover {
+    background: linear-gradient(#258100, #2fa700);
+}
+
+.continue-button__text {
+    font-size: 25px;
+}
+
+.continue-button__arrow {
+    width: 35px;
+    transform: rotate(180deg) translateY(-10px);
+}
