@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+}
+
+.playing-field {
+    position: relative;
+    width: 75%;
+    background: linear-gradient(#ffffff, #ccffff);
+    overflow: hidden;
+}
+
+.playing-field__rock {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.playing-field__wave {
+    width: 110%;
+    height: 100px;
+    background-color: #1254cf;
+    position: absolute;
+    bottom: -40px;
+}
+
+.playing-field__wave--wave1 {
+    animation: vawe 10s infinite;
+}
+
+.playing-field__wave--wave2 {
+    animation: vawe 5s infinite;
+    border-radius: 50%;
+}
+
+@keyframes vawe {
+    0% {
+        transform: skewY(1deg) rotate(1deg) translateX(-10px);
+    }
+
+    50% {
+        transform: skewY(-1deg) rotate(-1deg) translateX(-10px);
+    }
+
+    100% {
+        transform: skewY(1deg) rotate(1deg) translateX(-10px);
+    }
+}
+
+.control {
+    width: 25%;
+    background-color: rgb(157, 247, 250);
+}
+
+.control__score {
+    height: 100px;
+    line-height: 150px;
+    text-align: center;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    background-color: #ececec;
+    font-size: 30px;
+}
+
+.control__star {
+    width: 30px;
+    transform: translateY(5px);
+}
+
+.control__calculator {
+    margin: 0 auto;
+    width: 90%;
+    background-color: #ecd8cd;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.control__display {
+    width: 100%;
+    height: 100px;
+}
+
+.control__button {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    width: 25%;
+    height: 60px;
+    background-color: #f6ffff;
+    outline: 1px solid #ecd8cd;
+}
+
+.control__button:hover {
+    background-color: #ccffff;
+}
+
+.control__button--clear,
+.control__button--enter,
+.control__button--delete {
+    font-size: 20px;
+}
+
+.control__button--clear,
+.control__button--enter {
+    height: 120px;
+}
+
+.control__button--delete,
+.control__button--zero,
+.control__button--six,
+.control__button--four,
+.control__button--five {
+    margin-top: -60px;
+}
+
+.control__button--zero {
+    width: 50%;
+}
+
+.control__button--one,
+.control__button--two,
+.control__button--three {
+    margin-top: -120px;
+}
