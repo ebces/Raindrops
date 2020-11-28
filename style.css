@@ -92,6 +92,16 @@ main {
     margin: 0 5px;
 }
 
+.game-menu__play-text,
+.game-menu__tutorial-text {
+    text-decoration: none;
+}
+
+.game-menu__play-text:visited,
+.game-menu__tutorial-text {
+    color: #ffffff;
+}
+
 .game-menu__button--tutorial {
     background: linear-gradient(#1d73b9, #4fcceb, #1d73b9);
 }

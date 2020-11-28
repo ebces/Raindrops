@@ -27,6 +27,7 @@ main {
     background-color: #1254cf;
     position: absolute;
     bottom: -40px;
+    transition: 1s;
 }
 
 .playing-field__wave--wave1 {
@@ -73,6 +74,7 @@ main {
 }
 
 .control__calculator {
+    user-select: none;
     margin: 0 auto;
     width: 90%;
     background-color: #ecd8cd;
@@ -84,6 +86,9 @@ main {
 .control__display {
     width: 100%;
     height: 100px;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
 }
 
 .control__button {
@@ -129,4 +134,177 @@ main {
 .control__button--two,
 .control__button--three {
     margin-top: -120px;
+}
+
+.drop {
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #0099ff;
+    border-radius: 50%;
+    background-color: #00ffff;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.drop--bonus {
+    background-color: #ff9900;
+    border: 2px solid #ff5e00;
+}
+
+.drop__numbers--first {
+    margin-top: -10px;
+}
+
+.drop__numbers--second {
+    margin-top: -30px;
+}
+
+.splash {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+}
+
+.splash--animation {
+    animation: splash .2s;
+    z-index: 1;
+}
+
+.playing-field__wrong-answer {
+    transition: .2s;
+    opacity: 0;
+    color: #910e0e;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+}
+
+.playing-field__wrong-answer--animation {
+    transform: scale(4);
+    opacity: 1;
+}
+
+@keyframes splash {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(3);
+        opacity: 1;
+    }
+}
+
+.control__play-button {
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+    border: 2px solid #0099ff;
+    border-radius: 5px;
+    background-color: #0b8000;
+    margin: 5px auto 0;
+}
+
+.control__play-button:hover {
+    background-color: #064d00;
+}
+
+.control__link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.control__link:visited {
+    color: #ffffff;
+}
+
+@media (max-width:900px) {
+    main {
+        flex-direction: column;
+    }
+
+    .playing-field {
+        height: 70vh;
+        width: 100%;
+    }
+
+    .control {
+        overflow: hidden;
+        height: 30vh;
+        width: 100%;
+    }
+
+    .control__score {
+        height: 7vh;
+        line-height: 10vh;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .control__star {
+        width: 15px;
+    }
+
+    .control__calculator {
+        margin-top: -25px;
+    }
+
+    .control__display {
+        height: 25px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .control__button {
+        font-size: 15px;
+        line-height: 3vh;
+        height: 3vh;
+    }
+
+    .control__button--clear,
+    .control__button--enter,
+    .control__button--delete {
+        font-size: 10px;
+    }
+
+    .control__button--clear,
+    .control__button--enter {
+        height: 6vh;
+    }
+
+    .control__button--delete,
+    .control__button--zero,
+    .control__button--six,
+    .control__button--four,
+    .control__button--five {
+        margin-top: -3vh;
+    }
+
+    .control__button--one,
+    .control__button--two,
+    .control__button--three {
+        margin-top: -6vh;
+    }
+
+    .control__play-button {
+        width: 50%;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+    }
 }

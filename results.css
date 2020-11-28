@@ -65,9 +65,19 @@ body {
 
 .continue-button__text {
     font-size: 25px;
+    text-decoration: none;
+}
+
+.continue-button__text:visited {
+    color: #ffffff;
 }
 
 .continue-button__arrow {
     width: 35px;
     transform: rotate(180deg) translateY(-10px);
+}
+
+.statistic__number {
+    color: #00a2ff;
+    font-weight: bold;
 }
