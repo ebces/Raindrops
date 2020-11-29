@@ -1,16 +1,3 @@
-:root {
-    --white-color:#ffffff;
-    --dark-mint-color:#00fcfca2;
-    --dark-mint-color2:#00c5c5;
-    --grey-color:#a5a5a5;
-    --grey-color2:#e7e7e7;
-    --grey-color3:#afafaf;
-    --brown-color:#793a2a;
-    --green-color1:#2fa700;
-    --green-color2:#258100;
-    --blue-color:#00a2ff;
-}
-
 @font-face {
     font-family: futurescope;
     src: url(assets/fonts/19846.otf);
@@ -18,7 +5,7 @@
 
 body {
     margin: 0;
-    background: linear-gradient(var(--white-color), var(--dark-mint-color), var(--white-color));
+    background: linear-gradient(var(--white), var(--dark-mint), var(--white));
     height: 100vh;
 }
 
@@ -26,18 +13,18 @@ body {
     margin-top: 0;
     padding-top: 80px;
     font-family: futurescope;
-    color: var(--dark-mint-color2);
+    color: var(--mint);
     text-align: center;
     font-size: 80px;
 }
 
 .statistic {
-    border: 1px solid var(--grey-color);
+    border: 1px solid var(--grey1);
     width: 300px;
     margin: 0 auto;
-    background-color: var(--grey-color2);
+    background-color: var(--grey2);
     border-radius: 5px;
-    box-shadow: 0 0 10px var(--grey-color3);
+    box-shadow: 0 0 10px var(--grey3);
 }
 
 .statistic__speed,
@@ -56,7 +43,7 @@ body {
 .statistic__text--total-score {
     font-size: 30px;
     font-weight: bold;
-    color: var(--brown-color);
+    color: var(--brown);
     text-align: center;
     padding: 0;
 }
@@ -71,12 +58,12 @@ body {
     height: 50px;
     font-size: 20px;
     padding-bottom: 60px;
-    background: linear-gradient(var(--green-color1), var(--green-color2));
-    color: var(--white-color);
+    background: linear-gradient(var(--green1), var(--green2));
+    color: var(--white);
 }
 
 .continue-button:hover {
-    background: linear-gradient(var(--green-color2), var(--green-color1));
+    background: linear-gradient(var(--green2), var(--green1));
 }
 
 .continue-button__arrow {
@@ -85,6 +72,6 @@ body {
 }
 
 .statistic__number {
-    color: var(--blue-color);
+    color: var(--blue);
     font-weight: bold;
 }
