@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raindrops</title>
     <link rel="stylesheet" href="style.css">
-    <link  rel="icon" href = "data:,">
+    <link rel="icon" href = "data:,">
 </head>
 <body>
     <main>
@@ -25,14 +25,14 @@
             <div class="drops__drop drops__drop--right-drop"></div>
         </div>
         <div class="game-menu">
-            <div class="game-menu__button game-menu__button--tutorial">
-                <a href="./tutorial.html" class="game-menu__tutorial-text">How to Play</a>
+            <button onclick="document.location='./tutorial.html'" class="game-menu__button game-menu__button--tutorial">
+                How to Play
                 <img src="assets/images/question.png" alt="question" class="game-menu__question">
-            </div>
-            <div class="game-menu__button game-menu__button--play">
-                <a href="./playing-field.html" class="game-menu__play-text">Play</a>
+            </button>
+            <button onclick="document.location='./playing-field.html'" class="game-menu__button game-menu__button--play">
+                Play
                 <img src="assets/images/star.png" alt="star" class="game-menu__star">
-            </div>
+            </button>
         </div>
     </main>
 </body>

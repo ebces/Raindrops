@@ -1,3 +1,13 @@
+:root {
+    --mint-color: #00c5c5;
+    --dark-mint-color: #00fcfca2;
+    --sky-color: #4fcceb;
+    --green-color: #0b8300;
+    --light-green-color: #73e278;
+    --blue-color: #1d73b9;
+    --white-color: #ffffff;
+}
+
 @font-face {
     font-family: futurescope;
     src: url(assets/fonts/19846.otf);
@@ -5,7 +15,7 @@
 
 body {
     margin: 0;
-    background: linear-gradient(#ffffff, #00fcfca2, #ffffff);
+    background: linear-gradient(var(--white-color), var(--dark-mint-color), var(--white-color));
     height: 100vh;
 }
 
@@ -19,7 +29,7 @@ main {
     margin-top: 0;
     padding-top: 80px;
     font-family: futurescope;
-    color: #00c5c5;
+    color: var(--mint-color);
     text-align: center;
     font-size: 80px;
 }
@@ -49,7 +59,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00c5c5;
+    color: var(--mint-color);
 }
 
 .drops__numbers,
@@ -86,36 +96,27 @@ main {
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
-    color: #ffffff;
+    color: var(--white-color);
     padding: 10px;
     border-radius: 10px;
+    border: none;
     margin: 0 5px;
 }
 
-.game-menu__play-text,
-.game-menu__tutorial-text {
-    text-decoration: none;
-}
-
-.game-menu__play-text:visited,
-.game-menu__tutorial-text {
-    color: #ffffff;
-}
-
 .game-menu__button--tutorial {
-    background: linear-gradient(#1d73b9, #4fcceb, #1d73b9);
+    background: linear-gradient(var(--blue-color), var(--sky-color), var(--blue-color));
 }
 
 .game-menu__button--tutorial:hover {
-    background: linear-gradient(#4fcceb, #1d73b9, #4fcceb);
+    background: linear-gradient(var(--sky-color), var(--blue-color), var(--sky-color));
 }
 
 .game-menu__button--play {
-    background: linear-gradient(#0b8300, #73e278, #0b8300);
+    background: linear-gradient(var(--green-color), var(--light-green-color), var(--green-color));
 }
 
 .game-menu__button--play:hover {
-    background: linear-gradient(#73e278, #0b8300, #73e278);
+    background: linear-gradient(var(--light-green-color), var(--green-color), var(--light-green-color));
 }
 
 .game-menu__button--tutorial:hover .game-menu__question,

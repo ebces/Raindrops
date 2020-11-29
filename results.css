@@ -1,3 +1,16 @@
+:root {
+    --white-color:#ffffff;
+    --dark-mint-color:#00fcfca2;
+    --dark-mint-color2:#00c5c5;
+    --grey-color:#a5a5a5;
+    --grey-color2:#e7e7e7;
+    --grey-color3:#afafaf;
+    --brown-color:#793a2a;
+    --green-color1:#2fa700;
+    --green-color2:#258100;
+    --blue-color:#00a2ff;
+}
+
 @font-face {
     font-family: futurescope;
     src: url(assets/fonts/19846.otf);
@@ -5,7 +18,7 @@
 
 body {
     margin: 0;
-    background: linear-gradient(#ffffff, #00fcfca2, #ffffff);
+    background: linear-gradient(var(--white-color), var(--dark-mint-color), var(--white-color));
     height: 100vh;
 }
 
@@ -13,18 +26,18 @@ body {
     margin-top: 0;
     padding-top: 80px;
     font-family: futurescope;
-    color: #00c5c5;
+    color: var(--dark-mint-color2);
     text-align: center;
     font-size: 80px;
 }
 
 .statistic {
-    border: 1px solid #a5a5a5;
+    border: 1px solid var(--grey-color);
     width: 300px;
     margin: 0 auto;
-    background-color: #e7e7e7;
+    background-color: var(--grey-color2);
     border-radius: 5px;
-    box-shadow: 0 0 10px #afafaf;
+    box-shadow: 0 0 10px var(--grey-color3);
 }
 
 .statistic__speed,
@@ -43,33 +56,27 @@ body {
 .statistic__text--total-score {
     font-size: 30px;
     font-weight: bold;
-    color: #793a2a;
+    color: var(--brown-color);
     text-align: center;
     padding: 0;
 }
 
 .continue-button {
+    border: none;
     cursor: pointer;
+    display: block;
     margin: 10px auto 0;
     border-radius: 5px;
     width: 150px;
     height: 50px;
-    background: linear-gradient(#2fa700, #258100);
-    color: #ffffff;
-    text-align: center;
+    font-size: 20px;
+    padding-bottom: 60px;
+    background: linear-gradient(var(--green-color1), var(--green-color2));
+    color: var(--white-color);
 }
 
 .continue-button:hover {
-    background: linear-gradient(#258100, #2fa700);
-}
-
-.continue-button__text {
-    font-size: 25px;
-    text-decoration: none;
-}
-
-.continue-button__text:visited {
-    color: #ffffff;
+    background: linear-gradient(var(--green-color2), var(--green-color1));
 }
 
 .continue-button__arrow {
@@ -78,6 +85,6 @@ body {
 }
 
 .statistic__number {
-    color: #00a2ff;
+    color: var(--blue-color);
     font-weight: bold;
 }

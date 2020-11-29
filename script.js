@@ -10,7 +10,7 @@ const playButton = document.querySelector('.control__play-button');
 const wrongAnswerString = document.querySelector('.playing-field__wrong-answer');
 
 const getRamdomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const regExp = /^[0-9]$/;
+const isNumberRegExp = /^[0-9]$/;
 const generateElem = (tagName = 'div') => document.createElement(tagName);
 
 soundRain.play();
@@ -31,7 +31,7 @@ let roundDuration = 0;
 const start = new Date();
 
 const changeDisplayValue = (number) => {
-  const isNumber = regExp.test(number);
+  const isNumber = isNumberRegExp.test(number);
   const isCorrectLength = displayCalculator.textContent.length < 5;
 
   if (!isNumber || !isCorrectLength) return;
@@ -121,6 +121,7 @@ const makeNewDrop = (indent, bonusDrop) => {
       break;
     default:
   }
+
   return newDrop;
 };
 
@@ -130,6 +131,7 @@ const makeNewSplash = (indent) => {
   newSplash.classList.add('splash');
   newSplash.setAttribute('src', 'assets/images/splash.png');
   newSplash.style.left = `${indent}px`;
+
   return newSplash;
 };
 
