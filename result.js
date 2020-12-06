@@ -3,11 +3,6 @@ const totalEquationsStatistic = document.querySelector('.statistic__number--tota
 const overallAccuracy = document.querySelector('.statistic__number--overall');
 const totalScore = document.querySelector('.statistic__text--total-score');
 
-// equationsStatistic.textContent = sessionStorage.getItem('equationsPerMinute');
-// totalEquationsStatistic.textContent = sessionStorage.getItem('totalEquationsSolved');
-// overallAccuracy.textContent = `${sessionStorage.getItem('overallAccuracy')}%`;
-// totalScore.textContent = `${sessionStorage.getItem('scoreValue')} points`;
-
 equationsStatistic.textContent = sessionStorage.getItem('equationsPerMinute') ? sessionStorage.getItem('equationsPerMinute') : 0;
 totalEquationsStatistic.textContent = sessionStorage.getItem('totalEquationsSolved') ? sessionStorage.getItem('totalEquationsSolved') : 0;
 overallAccuracy.textContent = sessionStorage.getItem('overallAccuracy') ? `${sessionStorage.getItem('overallAccuracy')}%` : 0;
