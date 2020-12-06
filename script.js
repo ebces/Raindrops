@@ -230,7 +230,7 @@ const tutorialMode = () => {
       playSplashAnimation(firstSplash);
       removeElement(firstDrop);
     }, 1000);
-  }, 4000);
+  }, 2000);
 };
 
 const playMode = (game) => {
@@ -265,6 +265,7 @@ const playMode = (game) => {
 
 if (playButton) {
   setInterval(tutorialMode, 2000);
+  calculator.style.marginTop = '-25px';
 } else {
   calculator.addEventListener('click', addCalculatorControl);
   const game = setInterval(() => playMode(game), 3000);

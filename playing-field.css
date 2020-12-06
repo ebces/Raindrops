@@ -225,19 +225,23 @@ main {
     background-color: var(--dark-green);
 }
 
+.control__play-button:focus {
+    outline: none;
+}
+
 @media (max-width:900px) {
     main {
         flex-direction: column;
     }
 
     .playing-field {
-        height: 70vh;
+        height: 75vh;
         width: 100%;
     }
 
     .control {
         overflow: hidden;
-        height: 30vh;
+        height: 25vh;
         width: 100%;
     }
 
@@ -253,7 +257,7 @@ main {
     }
 
     .control__calculator {
-        margin-top: -25px;
+        margin-top: -10px
     }
 
     .control__display {
@@ -263,7 +267,7 @@ main {
     }
 
     .control__button {
-        font-size: 15px;
+        font-size: 3vh;
         line-height: 3vh;
         height: 3vh;
     }
@@ -295,8 +299,8 @@ main {
 
     .control__play-button {
         width: 50%;
-        height: 30px;
-        font-size: 20px;
-        line-height: 30px;
+        height: 3vh;
+        font-size: 2vh;
+        line-height: 2vh;
     }
 }

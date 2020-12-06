@@ -15,7 +15,7 @@ body {
     font-family: futurescope;
     color: var(--mint);
     text-align: center;
-    font-size: 80px;
+    font-size: 10vw;
 }
 
 .statistic {
@@ -66,6 +66,10 @@ body {
     background: linear-gradient(var(--green2), var(--green1));
 }
 
+.continue-button:focus {
+    outline: none;
+}
+
 .continue-button__arrow {
     width: 35px;
     transform: rotate(180deg) translateY(-10px);
@@ -74,4 +78,11 @@ body {
 .statistic__number {
     color: var(--blue);
     font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .title {
+        font-size: 65px;
+        padding-top: 10px;
+    }
 }
