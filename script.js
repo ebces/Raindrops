@@ -144,8 +144,8 @@ const increaseSeaLevel = () => {
 const saveStatistic = () => {
   sessionStorage.setItem('equationsPerMinute', equationsPerMinute.toFixed());
   sessionStorage.setItem('totalEquationsSolved', totalEquationsSolved);
-  sessionStorage.setItem('overallAccuracy', overallAccuracy.toFixed());
-  sessionStorage.setItem('scoreValue', scoreValue);
+  sessionStorage.setItem('overallAccuracy', `${overallAccuracy.toFixed()}%`);
+  sessionStorage.setItem('scoreValue', `${scoreValue} points`);
 };
 
 const finishGame = (timer) => {
