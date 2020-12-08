@@ -87,6 +87,24 @@ const makeNewDrop = (indent, bonusDrop) => {
   const firstNumber = getRamdomNumber(5 * gameLevel, 10 * gameLevel);
   const secondNumber = getRamdomNumber(1 * gameLevel, 5 * gameLevel);
   const operation = generateElem();
+  const randomNumber = getRamdomNumber(0, 2);
+  const mathematicalSymbols = {
+    0: {
+      symbol: '+',
+      result: firstNumber + secondNumber,
+    },
+    1: {
+      symbol: '-',
+      result: firstNumber - secondNumber,
+    },
+    2: {
+      symbol: '*',
+      result: firstNumber * secondNumber,
+    },
+  };
+
+  operation.textContent = mathematicalSymbols[randomNumber].symbol;
+  newDrop.result = mathematicalSymbols[randomNumber].result;
 
   dropFirstNumber.textContent = firstNumber;
   dropSecondNumber.textContent = secondNumber;
@@ -106,21 +124,6 @@ const makeNewDrop = (indent, bonusDrop) => {
 
   newDrop.classList.add('drop');
   newDrop.style.left = `${indent}px`;
-  switch (getRamdomNumber(0, 2)) {
-    case 0:
-      newDrop.result = firstNumber + secondNumber;
-      operation.textContent = '+';
-      break;
-    case 1:
-      newDrop.result = firstNumber - secondNumber;
-      operation.textContent = '-';
-      break;
-    case 2:
-      newDrop.result = firstNumber * secondNumber;
-      operation.textContent = '*';
-      break;
-    default:
-  }
 
   return newDrop;
 };
@@ -152,7 +155,7 @@ const finishGame = (timer) => {
   if (levelSea < 250) return;
 
   roundDuration = new Date(new Date().getTime() - start.getTime()).getMinutes();
-  overallAccuracy = tryCount === 0 ? 0 : totalEquationsSolved / (tryCount / 100);
+  overallAccuracy = tryCount ? totalEquationsSolved / (tryCount / 100) : 0;
   equationsPerMinute = roundDuration >= 1
     ? totalEquationsSolved / roundDuration : totalEquationsSolved;
 
