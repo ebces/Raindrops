@@ -13,20 +13,20 @@ const getRamdomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 const isNumberRegExp = /^[0-9]$/;
 const generateElem = (tagName = 'div') => document.createElement(tagName);
 
-const mathematicalSymbols = {
+const getSymbolsAndResults = (firstNum, secondNum) => ({
   0: {
     symbol: '+',
-    result: 0,
+    result: firstNum + secondNum,
   },
   1: {
     symbol: '-',
-    result: 0,
+    result: firstNum - secondNum,
   },
   2: {
     symbol: '*',
-    result: 0,
+    result: firstNum * secondNum,
   },
-};
+});
 
 soundRain.play();
 
@@ -103,13 +103,10 @@ const makeNewDrop = (indent, bonusDrop) => {
   const secondNumber = getRamdomNumber(1 * gameLevel, 5 * gameLevel);
   const operation = generateElem();
   const randomNumber = getRamdomNumber(0, 2);
+  const symbolsAndResults = getSymbolsAndResults(firstNumber, secondNumber);
 
-  mathematicalSymbols[0].result = firstNumber + secondNumber;
-  mathematicalSymbols[1].result = firstNumber - secondNumber;
-  mathematicalSymbols[2].result = firstNumber * secondNumber;
-
-  operation.textContent = mathematicalSymbols[randomNumber].symbol;
-  newDrop.result = mathematicalSymbols[randomNumber].result;
+  operation.textContent = symbolsAndResults[randomNumber].symbol;
+  newDrop.result = symbolsAndResults[randomNumber].result;
 
   dropFirstNumber.textContent = firstNumber;
   dropSecondNumber.textContent = secondNumber;
