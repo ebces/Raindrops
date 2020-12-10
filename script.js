@@ -104,8 +104,7 @@ const makeNewDrop = (indent, bonusDrop) => {
   const operation = generateElem();
   const randomNumber = getRamdomNumber(0, 2);
   const symbolsAndResults = getSymbolsAndResults(firstNumber, secondNumber);
-  const { symbol } = symbolsAndResults[randomNumber];
-  const { result } = symbolsAndResults[randomNumber];
+  const { symbol, result } = symbolsAndResults[randomNumber];
 
   operation.textContent = symbol;
   newDrop.result = result;
